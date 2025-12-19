@@ -1,0 +1,13 @@
+@layer components {
+  button.my-button {
+    @apply flex h-10 max-h-10 min-h-10 cursor-pointer items-center justify-center gap-1 rounded-lg px-10 py-2 select-none;
+
+    &.primary {
+      @apply bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800 disabled:bg-blue-400;
+    }
+
+    & > span {
+      @apply font-subtitle-lg truncate;
+    }
+  }
+}
