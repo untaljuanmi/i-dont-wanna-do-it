@@ -1,22 +1,24 @@
-<nav class="flex w-full gap-4 rounded-2xl bg-gray-700 p-4 select-none">
-  <button class="my-button primary">
-    <span class="mat-icon">add_task</span>
-    <span class="font-subtitle-lg">Añadir tarea</span>
+@let _isExpanded = isExpanded();
+
+<nav class="flex flex-row gap-4 rounded-2xl bg-gray-200 p-4 md:flex-col dark:bg-gray-900">
+  <button
+    class="my-icon-button primary hidden self-end md:flex"
+    (click)="isExpanded.set(!_isExpanded)"
+  >
+    <span class="mat-icon mat-icon-3xl">
+      @if (!_isExpanded) {
+        dock_to_right
+      } @else {
+        dock_to_left
+      }
+    </span>
   </button>
-  <button class="my-button primary">
-    <span class="mat-icon">today</span>
-    <span class="font-subtitle-lg">Hoy</span>
+  <button class="my-button primary justify-start self-end p-2 md:w-full">
+    <span class="mat-icon mat-icon-3xl">today</span>
+    <span>Hoy</span>
   </button>
-  <button class="my-button primary">
-    <span class="mat-icon">calendar_clock</span>
-    <span class="font-subtitle-lg">Próximo</span>
+  <button class="my-button primary justify-start self-end p-2 md:w-full">
+    <span class="mat-icon mat-icon-3xl">calendar_clock</span>
+    <span>Próximo</span>
   </button>
-  <!--<button class="my-button primary">
-    <span class="mat-icon">assignment</span>
-    <span class="font-subtitle-lg">Mis tareas</span>
-  </button>
-  <button class="my-button primary">
-    <span class="mat-icon">assignment_globe</span>
-    <span class="font-subtitle-lg">Mis tareas compartidas</span>
-  </button>-->
 </nav>

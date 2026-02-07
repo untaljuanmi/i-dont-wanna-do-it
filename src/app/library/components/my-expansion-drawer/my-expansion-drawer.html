@@ -1,0 +1,19 @@
+@let _minWidth = minWidth();
+@let _width = width();
+@let _isExpanded = isExpanded();
+
+<div
+  class="my-expansion-drawer-launcher-container"
+  [class.expanded]="_isExpanded"
+  [style.flex-basis.px]="_isExpanded ? _width : _minWidth"
+>
+  <div class="my-expansion-drawer-launcher">
+    <ng-content select="[myExpansionDrawerLauncher]" />
+  </div>
+</div>
+
+<div class="my-expansion-drawer-content-container">
+  <div class="my-expansion-drawer-content">
+    <ng-content select="[myExpansionDrawerContent]" />
+  </div>
+</div>

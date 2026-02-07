@@ -1,0 +1,9 @@
+@layer components {
+  button.my-icon-button {
+    @apply flex h-10 max-h-10 min-h-10 w-10 max-w-10 min-w-10 cursor-pointer items-center justify-center rounded-lg select-none;
+
+    &.primary {
+      @apply bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800 disabled:bg-blue-400;
+    }
+  }
+}
