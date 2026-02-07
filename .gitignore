@@ -43,3 +43,7 @@ Thumbs.db
 
 # AI
 WARP.md
+
+# Lock files
+bun.lock
+package-lock.json
