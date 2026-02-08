@@ -1,0 +1,9 @@
+<div class="flex flex-1 cursor-default items-center justify-between gap-2 px-5 py-4 select-none">
+  <div class="flex items-center gap-2 text-gray-900 dark:text-gray-50">
+    <ng-content></ng-content>
+  </div>
+  <button class="my-icon-button" (click)="myDialogRef.close()">
+    <span class="mat-icon">close</span>
+  </button>
+</div>
+<hr class="my-divider mx-4" />

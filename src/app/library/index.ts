@@ -1,1 +1,2 @@
-export * from './components';
+export * from './my-dialog';
+export * from './my-expansion-drawer';

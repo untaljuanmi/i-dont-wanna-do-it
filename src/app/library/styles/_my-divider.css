@@ -1,0 +1,5 @@
+@layer components {
+  hr.my-divider {
+    @apply border-t-2 text-gray-300 dark:text-gray-700;
+  }
+}

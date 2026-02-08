@@ -1,7 +1,12 @@
 @import 'tailwindcss';
 @import './app/library/styles/_my-button.css';
+@import './app/library/styles/_my-dialog.css';
+@import './app/library/styles/_my-divider.css';
 @import './app/library/styles/_my-expansion-drawer.css';
 @import './app/library/styles/_my-icon-button.css';
+@import './app/library/styles/_my-overlay.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Fonts */
 
@@ -180,7 +185,7 @@
 
 html,
 body {
-  @apply font-body-lg h-dvh w-dvw bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-50;
+  @apply font-body-lg h-dvh w-dvw bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-50;
 }
 
 body {
