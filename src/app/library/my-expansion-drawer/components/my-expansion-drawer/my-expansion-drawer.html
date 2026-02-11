@@ -3,9 +3,8 @@
 @let _isExpanded = isExpanded();
 
 <div
-  class="my-expansion-drawer-launcher-container"
+  class="my-expansion-drawer-launcher-container basis-18 {{ _isExpanded ? 'md:basis-75' : '' }}"
   [class.expanded]="_isExpanded"
-  [style.flex-basis.px]="_isExpanded ? _width : _minWidth"
 >
   <div class="my-expansion-drawer-launcher">
     <ng-content select="[myExpansionDrawerLauncher]" />

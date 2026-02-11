@@ -1,21 +1,17 @@
 @layer components {
   my-expansion-drawer {
-    @apply flex h-full w-full flex-1;
+    @apply flex h-full w-full flex-1 flex-col-reverse md:flex-row;
 
     .my-expansion-drawer-launcher-container {
-      @apply z-1 flex flex-col overflow-hidden bg-gray-200 transition-all duration-500 dark:bg-gray-800;
+      @apply md:bg-my-primary-default/10 z-1 flex flex-col overflow-hidden bg-transparent p-2 shadow-none transition-[flex-basis] duration-500 md:p-4 md:shadow-lg;
 
       .my-expansion-drawer-launcher {
-        @apply flex flex-1 flex-col overflow-hidden;
-      }
-
-      &.expanded {
-        @apply shadow-2xl;
+        @apply bg-my-primary-default/10 flex flex-col overflow-hidden rounded-full p-2 md:rounded-none md:bg-transparent md:p-0;
       }
     }
 
     .my-expansion-drawer-content-container {
-      @apply flex flex-1 flex-col overflow-hidden bg-gray-50 dark:bg-gray-900;
+      @apply flex flex-1 flex-col overflow-hidden;
 
       .my-expansion-drawer-content {
         @apply flex flex-1 flex-col overflow-hidden;

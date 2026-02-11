@@ -1,13 +1,13 @@
 @layer components {
   button.my-button {
-    @apply flex h-10 max-h-10 min-h-10 cursor-pointer items-center justify-center gap-1 rounded-lg px-10 py-2 select-none;
+    @apply flex h-10 max-h-10 min-h-10 cursor-pointer items-center justify-center gap-2 rounded-lg px-10 py-2 outline-none select-none;
 
     &.primary {
-      @apply bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800 disabled:bg-blue-400;
+      @apply bg-my-primary-default hover:bg-my-primary-hover active:bg-my-primary-active disabled:bg-my-primary-default/10 text-white disabled:cursor-not-allowed;
     }
 
     & > span:not(.mat-icon) {
-      @apply font-subtitle-lg truncate;
+      @apply font-subtitle-md truncate;
     }
   }
 }

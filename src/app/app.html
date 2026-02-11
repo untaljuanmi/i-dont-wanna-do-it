@@ -1,26 +1,12 @@
 @let _isExpanded = isExpanded();
 
-<my-expansion-drawer
-  class="hidden md:flex"
-  [minWidth]="minWidth()"
-  [width]="width()"
-  [(isExpanded)]="isExpanded"
->
+<my-expansion-drawer [minWidth]="minWidth()" [width]="width()" [(isExpanded)]="isExpanded">
   <ng-container myExpansionDrawerLauncher>
     <app-navbar [(isExpanded)]="isExpanded" />
   </ng-container>
   <ng-container myExpansionDrawerContent>
-    <ng-container *ngTemplateOutlet="main" />
+    <main class="h-full w-full overflow-auto px-4 pt-4 pb-26 md:pb-4">
+      <router-outlet></router-outlet>
+    </main>
   </ng-container>
 </my-expansion-drawer>
-
-<div class="flex h-full w-full flex-col overflow-hidden bg-gray-50 md:hidden dark:bg-gray-900">
-  <ng-container *ngTemplateOutlet="main" />
-  <app-navbar class="fixed bottom-0 w-full p-4 md:relative" />
-</div>
-
-<ng-template #main>
-  <main class="h-full w-full overflow-auto px-4 pt-4 pb-26 md:pb-4">
-    <router-outlet></router-outlet>
-  </main>
-</ng-template>

@@ -6,10 +6,20 @@
 @import './app/library/styles/_my-icon-button.css';
 @import './app/library/styles/_my-overlay.css';
 
+/* ---- Enable dark mode ------------------------------------------------------------------------ */
 @custom-variant dark (&:where(.dark, .dark *));
+/* ---------------------------------------------------------------------------------------------- */
 
-/* Fonts */
+/* ---- Tailwind custom theme ------------------------------------------------------------------- */
+@theme {
+  --color-my-primary-default: var(--color-blue-500);
+  --color-my-primary-hover: var(--color-blue-400);
+  --color-my-primary-active: var(--color-blue-600);
+}
+/* ---------------------------------------------------------------------------------------------- */
 
+/* ---- Fonts faces ----------------------------------------------------------------------------- */
+/* Roboto (normal) */
 @font-face {
   font-family: 'Roboto';
   src: url('./assets/fonts/roboto/Roboto-Variable.ttf') format('truetype');
@@ -18,6 +28,7 @@
   font-display: swap;
 }
 
+/* Roboto (italic) */
 @font-face {
   font-family: 'Roboto';
   src: url('./assets/fonts/roboto/Roboto-Italic-Variable.ttf') format('truetype');
@@ -26,6 +37,16 @@
   font-display: swap;
 }
 
+/* Nothing You Could Do (normal) */
+@font-face {
+  font-family: 'Nothing You Could Do';
+  src: url('./assets/fonts/roboto/Nothing-You-Could-Do-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Material Symbols Rounded (normal) */
 @font-face {
   font-family: 'Material Symbols Rounded';
   src: url('./assets/fonts/material/Material-Symbols-Rounded.ttf') format('truetype');
@@ -33,23 +54,50 @@
   font-style: normal;
   font-display: block;
 }
+/* ---------------------------------------------------------------------------------------------- */
 
-/* Subtitle */
+/* ---- Fonts utilities ------------------------------------------------------------------------- */
+/* Title (large) */
+@utility font-title-lg {
+  font-family: 'Nothing You Could Do', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.125rem;
+  font-weight: 400;
+}
 
+/* Title (medium) */
+@utility font-title-md {
+  font-family: 'Nothing You Could Do', sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+}
+
+/* Title (small) */
+@utility font-title-sm {
+  font-family: 'Nothing You Could Do', sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+/* Subtitle (large) */
 @utility font-subtitle-lg {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.125rem;
+  font-weight: 700;
+}
+
+/* Subtitle (medium) */
+@utility font-subtitle-md {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.375rem;
   font-weight: 700;
 }
 
-@utility font-subtitle-md {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 700;
-}
-
+/* Subtitle (small) */
 @utility font-subtitle-sm {
   font-family: 'Roboto', sans-serif;
   font-size: 0.75rem;
@@ -57,29 +105,23 @@
   font-weight: 700;
 }
 
-@utility font-subtitle-xs {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.625rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-}
-
-/* Body */
-
+/* Body (large) */
 @utility font-body-lg {
   font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 2.125rem;
   font-weight: 400;
 }
 
+/* Body (medium) */
 @utility font-body-md {
   font-family: 'Roboto', sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
+  font-size: 1rem;
+  line-height: 1.375rem;
   font-weight: 400;
 }
 
+/* Body (small) */
 @utility font-body-sm {
   font-family: 'Roboto', sans-serif;
   font-size: 0.75rem;
@@ -87,38 +129,7 @@
   font-weight: 400;
 }
 
-@utility font-body-xs {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.625rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-}
-
-/* Action */
-
-@utility font-action-lg {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  font-weight: 700;
-}
-
-@utility font-action-md {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 700;
-}
-
-@utility font-action-sm {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-}
-
-/* Icons */
-
+/* Icon (outline) */
 @utility mat-icon {
   font-family: 'Material Symbols Rounded', sans-serif;
   font-variation-settings:
@@ -136,6 +147,7 @@
   line-height: 1.125rem;
 }
 
+/* Icon (fill) */
 @utility mat-icon-fill {
   font-family: 'Material Symbols Rounded', sans-serif;
   font-variation-settings:
@@ -153,39 +165,46 @@
   line-height: 1.125rem;
 }
 
+/* Icon (small) */
 @utility mat-icon-sm {
   font-size: 0.875rem;
   line-height: 0.875rem;
 }
 
+/* Icon (medium) */
 @utility mat-icon-md {
   font-size: 1rem;
   line-height: 1rem;
 }
 
+/* Icon (large) */
 @utility mat-icon-lg {
   font-size: 1.125rem;
   line-height: 1.125rem;
 }
 
+/* Icon (x-large) */
 @utility mat-icon-xl {
   font-size: 1.125rem;
   line-height: 1.125rem;
 }
 
+/* Icon (2x-large) */
 @utility mat-icon-2xl {
   font-size: 1.25rem;
   line-height: 1.25rem;
 }
 
+/* Icon (3x-large) */
 @utility mat-icon-3xl {
   font-size: 1.5rem;
   line-height: 1.5rem;
 }
+/* ---------------------------------------------------------------------------------------------- */
 
 html,
 body {
-  @apply font-body-lg h-dvh w-dvw bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-50;
+  @apply font-body-md h-dvh w-dvw bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-50;
 }
 
 body {
