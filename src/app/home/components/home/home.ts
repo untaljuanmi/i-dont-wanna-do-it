@@ -1,10 +1,14 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
+
+import { DateParserPipe } from '../../../library';
 
 @Component({
   selector: 'app-home',
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, DateParserPipe],
   templateUrl: './home.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class Home {}
+export default class Home {
+  today = signal<Date>(new Date()).asReadonly();
+}

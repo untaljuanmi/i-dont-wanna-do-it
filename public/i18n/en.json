@@ -1,3 +1,9 @@
 {
-  "title": "I don't wanna do it"
+  "title": "I don't wanna do it",
+  "home": {
+    "welcome": "Hi, couple!",
+    "dailyProgress": "Daily progress",
+    "today": "Today",
+    "soon": "Soon"
+  }
 }

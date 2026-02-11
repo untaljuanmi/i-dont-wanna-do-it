@@ -57,35 +57,43 @@
 /* ---------------------------------------------------------------------------------------------- */
 
 /* ---- Fonts utilities ------------------------------------------------------------------------- */
-/* Title (large) */
-@utility font-title-lg {
-  font-family: 'Nothing You Could Do', sans-serif;
+/* Subtitle (4x-large) */
+@utility font-subtitle-4xl {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+/* Subtitle (3x-large) */
+@utility font-subtitle-3xl {
+  font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
-  line-height: 2.125rem;
-  font-weight: 400;
+  line-height: 1.875rem;
+  font-weight: 700;
 }
 
-/* Title (medium) */
-@utility font-title-md {
-  font-family: 'Nothing You Could Do', sans-serif;
-  font-size: 1rem;
-  line-height: 1.375rem;
-  font-weight: 400;
+/* Subtitle (2x-large) */
+@utility font-subtitle-2xl {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  font-weight: 700;
 }
 
-/* Title (small) */
-@utility font-title-sm {
-  font-family: 'Nothing You Could Do', sans-serif;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-  font-weight: 400;
+/* Subtitle (x-large) */
+@utility font-subtitle-xl {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  font-weight: 700;
 }
 
 /* Subtitle (large) */
 @utility font-subtitle-lg {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
-  line-height: 2.125rem;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
   font-weight: 700;
 }
 
@@ -100,17 +108,17 @@
 /* Subtitle (small) */
 @utility font-subtitle-sm {
   font-family: 'Roboto', sans-serif;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 700;
 }
 
-/* Body (large) */
-@utility font-body-lg {
+/* Subtitle (x-small) */
+@utility font-subtitle-sm {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
-  line-height: 2.125rem;
-  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: 700;
 }
 
 /* Body (medium) */
@@ -118,14 +126,6 @@
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.375rem;
-  font-weight: 400;
-}
-
-/* Body (small) */
-@utility font-body-sm {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
   font-weight: 400;
 }
 

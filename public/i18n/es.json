@@ -1,3 +1,9 @@
 {
-  "title": "No quiero hacerlo"
+  "title": "No quiero hacerlo",
+  "home": {
+    "welcome": "¡Hola, pareja!",
+    "dailyProgress": "Progreso diario",
+    "today": "Hoy",
+    "soon": "Próximamente"
+  }
 }

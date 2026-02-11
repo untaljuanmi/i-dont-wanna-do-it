@@ -1,31 +1,74 @@
-<p class="my-12 text-6xl">Today</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-12 text-6xl">Next</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
-<p class="my-6 text-2xl">- item</p>
+<div class="flex flex-col gap-4">
+  <div class="flex items-center justify-between gap-4">
+    <div class="flex flex-col">
+      <h1 class="font-subtitle-4xl flex items-center gap-2">
+        {{ 'home.welcome' | translate }}
+        <span class="mat-icon mat-icon-3xl text-yellow-400">waving_hand</span>
+      </h1>
+      <span class="text-gray-500">{{ today() | dateParser }}</span>
+    </div>
+    <div class="flex">
+      <div
+        class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-600 bg-blue-100 shadow-sm"
+      >
+        <span class="mat-icon mat-icon-3xl text-blue-600">person</span>
+      </div>
+      <div
+        class="-ml-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-600 bg-blue-100 shadow-md"
+      >
+        <span class="mat-icon mat-icon-3xl text-blue-600">person</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <div class="flex flex-col">
+      <h2 class="font-subtitle-xl flex items-center gap-2">
+        <span class="mat-icon mat-icon-xl text-blue-600">arrow_upload_progress</span>
+        {{ 'home.dailyProgress' | translate }}
+      </h2>
+    </div>
+    <div class="flex rounded-2xl bg-blue-100 p-4">
+      <div class="flex flex-col">
+        <p>blah</p>
+        <p>blah</p>
+        <p>blah</p>
+        <p>blah</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <div class="flex flex-col">
+      <h2 class="font-subtitle-xl flex items-center gap-2">
+        <span class="mat-icon mat-icon-xl text-blue-600">today</span>
+        {{ 'home.today' | translate }}
+      </h2>
+    </div>
+    <div class="flex rounded-2xl bg-blue-100 p-4">
+      <div class="flex flex-col">
+        <p>blah</p>
+        <p>blah</p>
+        <p>blah</p>
+        <p>blah</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <div class="flex flex-col">
+      <h2 class="font-subtitle-xl flex items-center gap-2">
+        <span class="mat-icon mat-icon-xl text-blue-600">calendar_clock</span>
+        {{ 'home.soon' | translate }}
+      </h2>
+    </div>
+    <div class="flex rounded-2xl bg-blue-100 p-4">
+      <div class="flex flex-col">
+        <p>blah</p>
+        <p>blah</p>
+        <p>blah</p>
+        <p>blah</p>
+      </div>
+    </div>
+  </div>
+</div>
