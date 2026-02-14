@@ -1,4 +1,4 @@
-export interface MyDialogConfig {
+export interface MyDialogConfigInterface {
   data?: unknown;
   minWidth?: string | number;
   width?: string | number;

@@ -1,7 +1,7 @@
 import { OverlayRef } from '@angular/cdk/overlay';
 import { Observable, Subject } from 'rxjs';
 
-export class MyDialogRef {
+export class MyDialogRefModel {
   private _afterClosedSubject = new Subject<unknown>();
 
   constructor(private _overlayRef: OverlayRef) {}

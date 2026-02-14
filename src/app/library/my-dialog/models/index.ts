@@ -1,1 +1,1 @@
-export * from './my-dialog-ref';
+export * from './my-dialog-ref.model';

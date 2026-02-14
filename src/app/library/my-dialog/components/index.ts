@@ -1,1 +1,1 @@
-export * from './my-dialog/my-dialog';
+export * from './my-dialog/my-dialog.component';

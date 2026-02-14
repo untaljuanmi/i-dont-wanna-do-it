@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-dialog',
-  templateUrl: './my-dialog.html',
+  templateUrl: './my-dialog.component.html',
 })
-export class MyDialog {}
+export class MyDialogComponent {}

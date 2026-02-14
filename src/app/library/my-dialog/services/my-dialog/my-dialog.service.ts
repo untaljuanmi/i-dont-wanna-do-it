@@ -2,8 +2,8 @@ import { ComponentType, Overlay } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { inject, Injectable, Injector } from '@angular/core';
 
-import { MyDialogConfig } from '../../interfaces';
-import { MyDialogRef } from '../../models';
+import { MyDialogConfigInterface } from '../../interfaces';
+import { MyDialogRefModel } from '../../models';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +12,7 @@ export class MyDialogService {
   private _overlay = inject(Overlay);
   private _injector = inject(Injector);
 
-  open<T>(component: ComponentType<T>, config?: MyDialogConfig): MyDialogRef {
+  open<T>(component: ComponentType<T>, config?: MyDialogConfigInterface): MyDialogRefModel {
     const positionStrategy = this._overlay
       .position()
       .global()
@@ -32,7 +32,7 @@ export class MyDialogService {
       maxHeight: config?.maxHeight ?? '100%',
     });
 
-    const dialogRef = new MyDialogRef(overlayRef);
+    const dialogRef = new MyDialogRefModel(overlayRef);
 
     if (config?.canCloseObBackdropClick) {
       dialogRef.listenBackdropClick();
@@ -41,7 +41,7 @@ export class MyDialogService {
     const injector = Injector.create({
       parent: this._injector,
       providers: [
-        { provide: MyDialogRef, useValue: dialogRef },
+        { provide: MyDialogRefModel, useValue: dialogRef },
         { provide: 'MY_DIALOG_DATA', useValue: config?.data },
       ],
     });

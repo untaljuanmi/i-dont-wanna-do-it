@@ -1,1 +1,1 @@
-export * from './my-dialog-config';
+export * from './my-dialog-config.interface';

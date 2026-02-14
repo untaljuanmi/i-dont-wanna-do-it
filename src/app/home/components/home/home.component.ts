@@ -6,9 +6,9 @@ import { DateParserPipe } from '../../../library';
 @Component({
   selector: 'app-home',
   imports: [TranslatePipe, DateParserPipe],
-  templateUrl: './home.html',
+  templateUrl: './home.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class Home {
+export default class HomeComponent {
   today = signal<Date>(new Date()).asReadonly();
 }
