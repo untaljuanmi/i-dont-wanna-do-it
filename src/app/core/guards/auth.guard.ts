@@ -12,7 +12,6 @@ export const privateGuard = (): CanActivateFn => {
     return authService.authState$.pipe(
       map((user: User | null) => {
         if (!user) {
-          console.log(' ⛔ User not authenticated, redirecting to login');
           router.navigate(['/auth/sign-in']).then();
           return false;
         }
@@ -30,7 +29,6 @@ export const publicGuard = (): CanActivateFn => {
     return authService.authState$.pipe(
       map((user: User | null) => {
         if (user) {
-          console.log(' ✅ User already authenticated, redirecting to home');
           router.navigate(['/home']).then();
           return false;
         }

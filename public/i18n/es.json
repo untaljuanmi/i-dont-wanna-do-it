@@ -1,5 +1,29 @@
 {
   "title": "No quiero hacerlo",
+  "auth": {
+    "signIn": {
+      "signInToYourAccount": "Inicia sesión en tu cuenta",
+      "yourEmail": "Tu correo",
+      "emailPlaceholder": "nombre@dominio.com",
+      "thisFieldIsRequired": "Este campo es obligatorio",
+      "thisEmailIsNotValid": "Este correo no es válido",
+      "password": "Contraseña",
+      "signIn": "Iniciar sesión",
+      "doNotHaveAnAccountYet": "¿Aún no tienes una cuenta?",
+      "signUp": "Crear cuenta"
+    },
+    "signUp": {
+      "signUpToYourAccount": "Crea una cuenta",
+      "yourEmail": "Tu correo",
+      "emailPlaceholder": "nombre@dominio.com",
+      "thisFieldIsRequired": "Este campo es obligatorio",
+      "thisEmailIsNotValid": "Este correo no es válido",
+      "password": "Contraseña",
+      "signUp": "Crear cuenta",
+      "alreadyHaveAnAccount": "¿Ya tienes una cuenta?",
+      "signIn": "Iniciar sesión"
+    }
+  },
   "home": {
     "welcome": "¡Hola, pareja!",
     "dailyProgress": "Progreso diario",

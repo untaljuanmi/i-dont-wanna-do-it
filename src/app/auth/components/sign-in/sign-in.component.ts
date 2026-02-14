@@ -3,7 +3,9 @@ import { FormBuilder, FormControl, ReactiveFormsModule, Validators } from '@angu
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 
-import { isNotAnEmailValidator, isRequiredValidator } from '../../../library';
+import { MyCardComponent, MyFormErrorComponent, MyFormFieldComponent } from '../../../library';
+import { MyCardContentComponent } from '../../../library/my-card/components/my-card-content/my-card-content.component';
+import { MyCardHeaderComponent } from '../../../library/my-card/components/my-card-header/my-card-header.component';
 import { AuthService } from '../../services';
 
 export interface SignInInterface {
@@ -13,7 +15,16 @@ export interface SignInInterface {
 
 @Component({
   selector: 'app-sign-in',
-  imports: [TranslatePipe, ReactiveFormsModule, RouterLink],
+  imports: [
+    TranslatePipe,
+    ReactiveFormsModule,
+    RouterLink,
+    MyCardComponent,
+    MyCardHeaderComponent,
+    MyCardContentComponent,
+    MyFormFieldComponent,
+    MyFormErrorComponent,
+  ],
   templateUrl: './sign-in.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -27,27 +38,25 @@ export default class SignInComponent {
     password: this._formBuilder.control(null, Validators.required),
   });
 
-  isRequired(field: string): boolean {
-    return isRequiredValidator(this.form, field);
-  }
-
-  isNotAnEmail(field: string): boolean {
-    return isNotAnEmailValidator(this.form, field);
-  }
-
-  onSubmit(): void {
+  onClickSignIn(): void {
     if (this.form.invalid) {
-      this.form.markAsTouched();
+      this.markAllAsTouched();
       return;
     }
 
     const { email, password } = this.form.value;
 
     if (!email || !password) {
-      this.form.markAsTouched();
+      this.markAllAsTouched();
       return;
     }
 
     this._authService.signIn(email, password);
+  }
+
+  private markAllAsTouched(): void {
+    this.form.markAllAsTouched();
+    this.form.get('email')?.updateValueAndValidity();
+    this.form.get('password')?.updateValueAndValidity();
   }
 }

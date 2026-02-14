@@ -3,7 +3,13 @@ import { FormBuilder, FormControl, ReactiveFormsModule, Validators } from '@angu
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 
-import { isNotAnEmailValidator, isRequiredValidator } from '../../../library';
+import {
+  MyCardComponent,
+  MyCardContentComponent,
+  MyCardHeaderComponent,
+  MyFormErrorComponent,
+  MyFormFieldComponent,
+} from '../../../library';
 import { AuthService } from '../../services';
 
 export interface SignUpInterface {
@@ -13,7 +19,16 @@ export interface SignUpInterface {
 
 @Component({
   selector: 'app-sign-up',
-  imports: [TranslatePipe, ReactiveFormsModule, RouterLink],
+  imports: [
+    TranslatePipe,
+    ReactiveFormsModule,
+    RouterLink,
+    MyCardComponent,
+    MyCardContentComponent,
+    MyCardHeaderComponent,
+    MyFormErrorComponent,
+    MyFormFieldComponent,
+  ],
   templateUrl: './sign-up.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -27,27 +42,25 @@ export default class SignUpComponent {
     password: this._formBuilder.control(null, Validators.required),
   });
 
-  isRequired(field: string): boolean {
-    return isRequiredValidator(this.form, field);
-  }
-
-  isNotAnEmail(field: string): boolean {
-    return isNotAnEmailValidator(this.form, field);
-  }
-
-  onSubmit(): void {
+  onClickSignUp(): void {
     if (this.form.invalid) {
-      this.form.markAsTouched();
+      this.markAllAsTouched();
       return;
     }
 
     const { email, password } = this.form.value;
 
     if (!email || !password) {
-      this.form.markAsTouched();
+      this.markAllAsTouched();
       return;
     }
 
     this._authService.signUp(email, password);
+  }
+
+  private markAllAsTouched(): void {
+    this.form.markAllAsTouched();
+    this.form.get('email')?.updateValueAndValidity();
+    this.form.get('password')?.updateValueAndValidity();
   }
 }

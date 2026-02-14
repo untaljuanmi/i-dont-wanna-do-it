@@ -1,5 +1,27 @@
 {
   "title": "I don't wanna do it",
+  "auth": {
+    "signIn": {
+      "signInToYourAccount": "Sign in to your account",
+      "yourEmail": "Your email",
+      "emailPlaceholder": "name@domain.com",
+      "thisFieldIsRequired": "This field is required",
+      "password": "Password",
+      "signIn": "Sign in",
+      "doNotHaveAnAccountYet": "Don't have an account yet?",
+      "signUp": "Sign up"
+    },
+    "signUp": {
+      "signUpToYourAccount": "Sign up to your account",
+      "yourEmail": "Your email",
+      "emailPlaceholder": "name@domain.com",
+      "thisFieldIsRequired": "This field is required",
+      "password": "Password",
+      "signUp": "Sign up",
+      "alreadyHaveAnAccount": "Already have an account?",
+      "signIn": "Sign in"
+    }
+  },
   "home": {
     "welcome": "Hi, couple!",
     "dailyProgress": "Daily progress",
