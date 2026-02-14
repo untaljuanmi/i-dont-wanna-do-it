@@ -1,8 +1,9 @@
-import { Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
   selector: 'my-card-header',
   templateUrl: './my-card-header.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MyCardHeaderComponent {
   divider = input<boolean>(false);
