@@ -1,11 +1,7 @@
 {
   "hosting": {
-    "public": "dist/i-dont-wanna-do-it",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "public": "dist/i-dont-wanna-do-it/browser",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
