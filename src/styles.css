@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import './app/library/styles/_my-button.css';
+@import './app/library/styles/_my-card.css';
 @import './app/library/styles/_my-dialog.css';
 @import './app/library/styles/_my-divider.css';
 @import './app/library/styles/_my-expansion-drawer.css';
@@ -114,7 +115,7 @@
 }
 
 /* Subtitle (x-small) */
-@utility font-subtitle-sm {
+@utility font-subtitle-xs {
   font-family: 'Roboto', sans-serif;
   font-size: 0.75rem;
   line-height: 1.125rem;
@@ -126,6 +127,14 @@
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.375rem;
+  font-weight: 400;
+}
+
+/* Body (small) */
+@utility font-body-sm {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 400;
 }
 
