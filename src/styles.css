@@ -4,7 +4,10 @@
 @import './app/library/styles/_my-dialog.css';
 @import './app/library/styles/_my-divider.css';
 @import './app/library/styles/_my-expansion-drawer.css';
+@import './app/library/styles/_my-form.css';
 @import './app/library/styles/_my-icon-button.css';
+@import './app/library/styles/_my-input.css';
+@import './app/library/styles/_my-label.css';
 @import './app/library/styles/_my-overlay.css';
 
 /* ---- Enable dark mode ------------------------------------------------------------------------ */
@@ -135,6 +138,14 @@
   font-family: 'Roboto', sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  font-weight: 400;
+}
+
+/* Body (x-small) */
+@utility font-body-xs {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
   font-weight: 400;
 }
 
