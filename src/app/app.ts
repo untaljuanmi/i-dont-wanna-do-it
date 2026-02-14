@@ -1,4 +1,3 @@
-import { NgTemplateOutlet } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
@@ -7,7 +6,7 @@ import { MyExpansionDrawer } from './library';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, MyExpansionDrawer, NgTemplateOutlet],
+  imports: [RouterOutlet, Navbar, MyExpansionDrawer],
   templateUrl: './app.html',
 })
 export class App {

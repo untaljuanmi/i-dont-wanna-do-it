@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { TranslatePipe } from '@ngx-translate/core';
 
 import { MyDialog } from '../../../library';
 import { MyDialogContent } from '../../../library/my-dialog/components/my-dialog-content/my-dialog-content';
@@ -8,7 +7,7 @@ import { MyDialogHeader } from '../../../library/my-dialog/components/my-dialog-
 
 @Component({
   selector: 'app-task-form',
-  imports: [TranslatePipe, MyDialog, MyDialogHeader, MyDialogContent, MyDialogFooter],
+  imports: [MyDialog, MyDialogHeader, MyDialogContent, MyDialogFooter],
   templateUrl: './task-form.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
