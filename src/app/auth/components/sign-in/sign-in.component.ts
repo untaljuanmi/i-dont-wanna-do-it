@@ -4,8 +4,7 @@ import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 
 import { MyCardComponent, MyFormErrorComponent, MyFormFieldComponent } from '../../../library';
-import { MyCardContentComponent } from '../../../library/my-card/components/my-card-content/my-card-content.component';
-import { MyCardHeaderComponent } from '../../../library/my-card/components/my-card-header/my-card-header.component';
+import { MyCardContentComponent, MyCardHeaderComponent } from '../../../library';
 import { AuthService } from '../../services';
 
 export interface SignInInterface {
