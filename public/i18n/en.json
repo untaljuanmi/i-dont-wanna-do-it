@@ -20,6 +20,12 @@
       "signUp": "Sign up",
       "alreadyHaveAnAccount": "Already have an account?",
       "signIn": "Sign in"
+    },
+    "errors": {
+      "auth/invalid-credential": "Invalid credentials",
+      "auth/weak-password": "The password must be at least 6 characters",
+      "auth/email-already-in-use": "The email is already in use",
+      "auth/too-many-requests": "Too many attempts. Please try again later"
     }
   },
   "home": {

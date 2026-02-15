@@ -2,11 +2,11 @@ import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { MyExpansionDrawerComponent } from '../../../library';
-import { Navbar } from '../navbar/navbar';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-layout',
-  imports: [MyExpansionDrawerComponent, Navbar, RouterOutlet],
+  imports: [MyExpansionDrawerComponent, NavbarComponent, RouterOutlet],
   templateUrl: './layout.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

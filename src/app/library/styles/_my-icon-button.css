@@ -1,9 +1,13 @@
 @layer components {
   button.my-icon-button {
-    @apply flex h-10 max-h-10 min-h-10 w-10 max-w-10 min-w-10 cursor-pointer items-center justify-center rounded-lg select-none;
+    @apply flex cursor-pointer items-center justify-center rounded-lg p-1 select-none;
 
     &.primary {
-      @apply bg-my-primary-default hover:bg-my-primary-hover active:bg-my-primary-active disabled:bg-my-primary-default/10 text-white;
+      @apply hover:text-my-primary-hover active:text-my-primary-active text-gray-900 disabled:text-gray-400;
+    }
+
+    &.ghost {
+      @apply rounded-full bg-transparent text-white hover:bg-white/15 active:bg-white/30 disabled:bg-transparent disabled:text-white/50;
     }
   }
 }

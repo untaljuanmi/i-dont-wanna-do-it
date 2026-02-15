@@ -38,7 +38,7 @@ export default class SignInComponent {
     password: this._formBuilder.control(null, Validators.required),
   });
 
-  onClickSignIn(): void {
+  onSubmit(): void {
     if (this.form.invalid) {
       this.markAllAsTouched();
       return;

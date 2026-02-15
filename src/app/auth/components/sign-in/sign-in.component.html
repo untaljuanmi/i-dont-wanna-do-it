@@ -8,7 +8,7 @@
       </h1>
     </my-card-header>
     <my-card-content>
-      <form [formGroup]="form" class="flex flex-col gap-4">
+      <form [formGroup]="form" class="flex flex-col gap-4" (submit)="onSubmit()">
         <my-form-field>
           <label for="emailField" class="my-label">
             {{ 'auth.signIn.yourEmail' | translate }}
@@ -42,7 +42,7 @@
             {{ 'auth.signIn.thisFieldIsRequired' | translate }}
           </my-form-error>
         </my-form-field>
-        <button type="submit" class="my-button primary w-full" (click)="onClickSignIn()">
+        <button type="submit" class="my-button primary w-full">
           {{ 'auth.signIn.signIn' | translate }}
         </button>
         <p class="font-body-sm text-gray-900">

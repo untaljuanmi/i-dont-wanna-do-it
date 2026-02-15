@@ -9,6 +9,7 @@
 @import './app/library/styles/_my-input.css';
 @import './app/library/styles/_my-label.css';
 @import './app/library/styles/_my-overlay.css';
+@import './app/library/styles/_my-toast.css';
 
 /* ---- Enable dark mode ------------------------------------------------------------------------ */
 @custom-variant dark (&:where(.dark, .dark *));
@@ -19,6 +20,18 @@
   --color-my-primary-default: var(--color-blue-500);
   --color-my-primary-hover: var(--color-blue-400);
   --color-my-primary-active: var(--color-blue-600);
+  --color-my-info-default: var(--color-cyan-500);
+  --color-my-info-hover: var(--color-cyan-400);
+  --color-my-info-active: var(--color-cyan-600);
+  --color-my-success-default: var(--color-green-500);
+  --color-my-success-hover: var(--color-green-400);
+  --color-my-success-active: var(--color-green-600);
+  --color-my-warning-default: var(--color-yellow-500);
+  --color-my-warning-hover: var(--color-yellow-400);
+  --color-my-warning-active: var(--color-yellow-600);
+  --color-my-danger-default: var(--color-red-500);
+  --color-my-danger-hover: var(--color-red-400);
+  --color-my-danger-active: var(--color-red-600);
 }
 /* ---------------------------------------------------------------------------------------------- */
 

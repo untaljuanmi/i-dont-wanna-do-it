@@ -22,6 +22,12 @@
       "signUp": "Crear cuenta",
       "alreadyHaveAnAccount": "¿Ya tienes una cuenta?",
       "signIn": "Iniciar sesión"
+    },
+    "errors": {
+      "auth/invalid-credential": "Credenciales inválidas",
+      "auth/weak-password": "La contraseña debe tener al menos 6 caracteres",
+      "auth/email-already-in-use": "El correo ya está en uso",
+      "auth/too-many-requests": "Demasiados intentos. Por favor, inténtalo de nuevo más tarde"
     }
   },
   "home": {
