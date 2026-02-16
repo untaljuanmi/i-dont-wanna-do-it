@@ -2,7 +2,7 @@
 
 <nav class="flex flex-row gap-2 rounded-full md:flex-col md:gap-4">
   <button
-    class="my-button primary hidden self-end p-2 md:flex"
+    class="my-button primary hidden self-end rounded-full p-2 md:flex"
     (click)="isExpanded.set(!_isExpanded)"
   >
     <span class="mat-icon mat-icon-3xl">
@@ -14,22 +14,22 @@
     </span>
   </button>
   <button
-    class="my-button primary justify-start self-end rounded-full p-2 md:w-full md:rounded-lg"
+    class="my-button primary justify-start self-end rounded-full p-2 md:w-full"
     (click)="onClickAddTask()"
   >
     <span class="mat-icon mat-icon-3xl">add_task</span>
     <span>Añadir tarea</span>
   </button>
-  <button class="my-button primary justify-start self-end rounded-full p-2 md:w-full md:rounded-lg">
+  <button class="my-button primary justify-start self-end rounded-full p-2 md:w-full">
     <span class="mat-icon mat-icon-3xl">today</span>
     <span>Hoy</span>
   </button>
-  <button class="my-button primary justify-start self-end rounded-full p-2 md:w-full md:rounded-lg">
+  <button class="my-button primary justify-start self-end rounded-full p-2 md:w-full">
     <span class="mat-icon mat-icon-3xl">calendar_clock</span>
     <span>Próximo</span>
   </button>
   <button
-    class="my-button primary justify-start self-end rounded-full p-2 md:w-full md:rounded-lg"
+    class="my-button primary justify-start self-end rounded-full p-2 md:w-full"
     (click)="onClickSignOut()"
   >
     <span class="mat-icon mat-icon-3xl">close</span>
